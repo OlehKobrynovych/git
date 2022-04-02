@@ -12,6 +12,15 @@ git config  user.email asd@asd.asd
 // щоб клонувати репозеторій на свій компютер
 git clone https://github.com/OlehKobrynovych/git.git
 
+
+// створюємо новий репозеторій на гітхабі
+// створюємо локально проект на компюторі і подключаємо гіт 
+git init
+// подключаємо репозеторій до нашого проекту 
+git remote add origin https://github.com/OlehKobrynovych/React_Redux.git
+
+
+
 // Для додавання файлів в локальне сховище 
     // 1. додавання файлів в стадію очікування;
     git add .
@@ -27,10 +36,10 @@ git clone https://github.com/OlehKobrynovych/git.git
             !*.js       всі файли крім файлів з розширенням .js 
 
     2. додавання файлів в локальне сховище;
-    git commit -m ‘my commit’ 
+    git commit -m 'my commit' 
 
-    3. Запросити зміни з віддаленого сховища
-    git fetch
+    3. Запросити зміни з віддаленого сховища // при роботі в команді
+    git fetch 
     git merge
 
     git pull origin master

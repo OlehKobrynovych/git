@@ -1,0 +1,61 @@
+// React github pages
+// https://github.com/gitname/react-gh-pages
+// https://create-react-app.dev/docs/deployment/#github-pages
+
+// 0.
+git init
+git remote add origin  https://github.com/OlehKobrynovych/React_Redux.git
+
+
+// 1.
+npm install gh-pages --save-dev
+
+
+// 2. 
+// package.json
+{
+    "homepage": "https://OlehKobrynovych.github.io/React_Redux",       // +
+    "name": "myreact",
+    "private": true,
+    "scripts": {
+        "predeploy": "npm run build",                                  // +
+        "deploy": "gh-pages -d build"                                  // +
+    },
+}
+
+// index.js
+<BrowserRouter basename={process.env.PUBLIC_URL}>
+    ...
+</BrowserRouter>
+
+
+// 3. 
+npm run deploy
+
+
+
+
+
+// ми получимо дві гілки:
+master - тут міститься наш код
+gh-pages - тут міститься білд, який хостится
+
+
+
+
+// cors
+// https://medium.com/@Dragonza/react-router-problem-with-gh-pages-c93a5e243819
+
+// 1.
+<BrouserRouter basename={ process.env.PUBLIC_URL }>
+    ...
+</BrouserRouter>
+
+
+// 2.
+// HashRouter (замість BrouserRouter)
+// # - браузерна фішка, обриває для сервера URL, сервер отримавши такий URL 
+{domainName}/{repositoryName}/#/MySpecificRoute
+// будуть думати що він отримав такий URL 
+{domainName}/{repositoryName}/
+// Навіть уже не потрібна basename={ process.env.PUBLIC_URL} (Suspense – працює)
