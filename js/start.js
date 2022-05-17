@@ -25,6 +25,7 @@ typeof x;
 console.log(Number.isNaN(NaN))           //true
 console.log(Number.isFinite(-Infinity))  //true
 
+(12).toString(2);  // перетворить 12 в 2йковій систкмі
 (123).toString();
 String(123);
 123 + '';
@@ -189,7 +190,8 @@ const arr2 = arr1.map((el, index, arr) => {
 
 
 // .......................... reduce()
-arr.reduce((accumulator, el, index, array) => { return accumulator += el;}, [initial]);   // initial - початкове значення акомулятора 
+arr.reduce((accumulator, el, index, array) => { return accumulator += el;}, [initial]);  
+ // initial - початкове значення акомулятора 
 // const sumArr1 = arr1.reduce((acc, el, index, arr) => {}, acc);
 // const sumArr1 = arr1.reduce((acc, el, index, arr) => {}, 0);
 // const sumArr1 = arr1.reduce((acc, el, index, arr) => {});
@@ -220,7 +222,8 @@ const sumArr1 = arr1.reduce((acc, el, index, arr) => {
 
 
 // .............................forEach()
-arr.forEach(function(el, index, array) {....});    // Метод forEach() виконує задану функцію один для кожного елемента в масі.
+arr.forEach(function(el, index, array) {....});    // Метод forEach() виконує задану функцію один 
+// для кожного елемента в масі.
 arr.forEach((el, index, array) => {....}); 
 
 arr.forEach((el, index, array) => alert(`${el} is at index ${index} in ${array}`)); 
@@ -275,7 +278,7 @@ for (let i = 0; i < 10; i++) {
 
 // ...........................replace()
 replace(/old/i,"new")     // Метод замінює вказане значення з іншим значенням в рядку: 
-// /old/i  де і модифікатор рекулярного виразу(шаблон покуку)
+// /old/i  де і модифікатор регулярного виразу(шаблон покуку)
 let p = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
 p = p.replace('dog', 'monkey');
 // p = "The quick brown fox jumps over the lazy monkey. If the dog reacted, was it really lazy?"
@@ -284,7 +287,8 @@ p = p.replace('dog', 'monkey');
 
 
 // ........................test()
-/asd/.test(str);      // test() виконує пошук відповідності між регулярним виразом і вказаним рядком. Повертає true або false.
+/asd/.test(str);      // test() виконує пошук відповідності між регулярним виразом і вказаним рядком.
+// Повертає true або false.
 
 /asd/gi.test(str); 
 RegExp(`${s}`,'gi').test(str); 
@@ -459,8 +463,11 @@ arr4 = arr4.flat(Infinity);    // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
 //...........................fill()
-arr.fill(value, start, end); // змінює всі елементи в масиві на статичні значення, від початкового індексу (за замовчуванням 0) до кінцевого індексу (за замовчуванням array.length). Він повертає змінений масив.
-arr.fill(value[, start[, end]])  // заповнює (змінює) всі елементи масиву з початкового індексу start, до індексу end
+arr.fill(value, start, end); // змінює всі елементи в масиві на статичні значення, від початкового 
+// індексу (за замовчуванням 0) до кінцевого індексу (за замовчуванням array.length). 
+// Він повертає змінений масив.
+arr.fill(value[, start[, end]])  // заповнює (змінює) всі елементи масиву з початкового індексу start, 
+//до індексу end
 
 const arr1 = [1, 2, 3, 4];
 arr1.fill(0, 1, 4);  // [1, 0, 0, 0]
@@ -480,7 +487,7 @@ Array(5).fill(13);   // ➞ [13, 13, 13, 13, 13]
 'абв'.repeat(0);    // ''
 'абв'.repeat(1);    // 'абв'
 'абв'.repeat(2);    // 'абвабв'
-'абв'.repeat(3.5);  // 'абвабвабв'
+'абв'.repeat(3.5);  // 'абвабвабв' количество будет преобразовано в целое число
 
 
 
@@ -1129,6 +1136,7 @@ const a = [...s.values()]
 //...............................Promise
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise
 Об'єкт  Promiseвикористовується для відкладених та асинхронних обчислень.
+в Promise можна передавати і синхронні функції вони виконуватимуться відразу 
 
 надають зручний спосіб організації асинхронного коду.
 це спеціальний об'єкт в JavaScript, який пов'язує «створюючий» і «споживаючий» коди разом. 
