@@ -38,3 +38,10 @@ body {
   background-repeat: no-repeat, repeat;
   padding: 15px;
 }
+
+
+// робить ефукт прозорого заблюреного заднього фону
+.header {
+  background-color: rgba(255,255,255,.6);
+  backdrop-filter: blur(5px)
+}
