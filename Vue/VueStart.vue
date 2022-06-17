@@ -152,6 +152,10 @@ export default {
     mounted() {         // секція монтування компонента спрацьовує 1 раз при монтуванні (юсефект з [] )
         // this.getDate();
 
+        add () {
+            this.$set(obj, поле, value)   //Vue3 спосіб добавити в обєкт поле щоб реактивно змінювалось відображення
+        }
+
         // this.intervalId = setInterval(this.handleChange, 3000);
 
         // document.querySelector('.c-datetime').addEventListener('click', this.handleChange);
