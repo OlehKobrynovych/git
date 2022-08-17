@@ -53,6 +53,30 @@ e.preventDefault();
 
 
 
+///.............................. деструкторизація
+
+const person {
+  name: 'leo',
+  age: '22',
+  address: {
+    country: 'uk',
+    city: 'Lviv'
+  }
+}
+
+const {
+  name: firstName = 'defoltName',               // якщо потрібно щоб змінну яку будемо використовувати називалась по іншому
+  age,
+  adrress {
+    country,
+    city: home
+  }
+} = person;
+
+const {name, ...info} = person    // всі інші ключі помістяться в info
+
+
+
 
 //...................................Array
 
