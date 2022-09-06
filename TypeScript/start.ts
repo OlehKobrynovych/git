@@ -49,3 +49,22 @@ console.log(user)       // 0
 function genericGet<T> (date: T): T {            // <T> означає що в функцію передадуть якісь дані і вона верне щось тогож типу  
     return date
 }
+
+
+////////////////////////////////////////////////////
+
+namespase User {                              // за допомогою namespase можна створити глобальні змінні (не бажано використовувати)
+    export name: string = 'asd',
+    export age: number = 55
+}
+
+////////////////////////////////////////////////////////////
+interface User {                    // в interface можна вказувати методи
+    name: string,                   // class asd implements User --------> створення класу на основі User, можна використовувати декілька interface 
+    age: number,
+    get(): string
+}
+
+interface Admin extends User {   // розширення interface за допомогою іншого interface, може бути декільька
+    get1(): string
+}
