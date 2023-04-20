@@ -42,3 +42,28 @@ export default TextWithEllipsis;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
+
+//  при наведені текст появляється 
+.product-card-user__card-info-size {
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+}
+.product-card-user__card-info-size:hover {
+    overflow: visible;
+    z-index: 1;
+}
+
+.product-card-user__card-info-size:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 9999px;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+  }
