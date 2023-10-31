@@ -15,6 +15,11 @@ const handleResize = () => {
 };
 
 
+// зміна вигляду для повзунка прокрутки
+.creating-category__text-tab--wrap::-webkit-scrollbar {
+    height: 1px;
+    background: #898989;
+}
 
 
 
