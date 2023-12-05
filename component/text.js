@@ -43,6 +43,12 @@ export default TextWithEllipsis;
     -webkit-box-orient: vertical;
 }
 
+
+// При зміні на горизонтальне положенні в телефоні або в планшені міняються стилі на іншу точку медіазапиту і при повернені назад не міняється 
+// фіксить зміну тексту
+-webkit-text-size-adjust: 100%;
+
+
 //  при наведені текст появляється 
 .product-card-user__card-info-size {
     width: 100px;

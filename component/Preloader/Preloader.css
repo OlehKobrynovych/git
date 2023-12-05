@@ -1,0 +1,45 @@
+.preloader--wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.preloader__loader-circle-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid transparent;
+    border-top: 5px solid #bbb;
+    border-right: 5px solid #bbb;
+    border-radius: 100%;
+    border-width: 3px;
+}
+
+.preloader__spinner_top {
+    animation: spinnerOne 3s linear infinite;
+    height: 70px;
+    width: 70px;
+}
+
+.preloader__spinner_mid {
+    animation: spinnerOne 5s linear infinite;
+    height: 47px;
+    width: 47px;
+}
+
+.preloader__spinner_bot {
+    animation: spinnerOne 5s linear infinite;
+    height: 24px;
+    width: 24px;
+}
+
+@keyframes spinnerOne {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

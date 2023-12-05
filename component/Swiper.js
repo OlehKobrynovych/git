@@ -1,3 +1,6 @@
+// анімація  слайдера
+// https://gsap.com/
+
 // заміна кнопок свайпера на свої 
 
 const swiperRef = useRef(null);

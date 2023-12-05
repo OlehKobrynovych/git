@@ -1,3 +1,37 @@
+// Прибрати скрол на safari
+https://habr.com/ru/articles/332872/
+const [modalScrollPosition, setModalScrollPosition] = useState(0);
+
+export const disabledScroll = (setModalScrollPosition=null) => {
+    if (setModalScrollPosition) {
+      setModalScrollPosition(window.scrollY);
+      document.body.style.cssText = `
+          overflow: hidden;
+          position: fixed;
+          top: -${window.scrollY}px;
+          left: 0;
+          width: 100vw;
+          padding-right: ${window.innerWidth - document.body.offsetWidth}px
+        `;
+          // height: 100vh;
+      document.documentElement.style.scrollBehavior = 'unset';
+    }
+}
+
+export const enabledScroll = (modalScrollPosition) => {
+  document.body.style.cssText = '';
+  window.scroll({top: modalScrollPosition})
+  document.documentElement.style.scrollBehavior = '';
+}
+
+// -------------------------------------------------------
+// повісити на html
+  // overscroll-behavior-y: none;
+// -------------------------------------------------------
+
+
+
+
 // повішати функцію на прослуховування
 useEffect(() => {
 
@@ -16,10 +50,10 @@ const handleResize = () => {
 
 
 // зміна вигляду для повзунка прокрутки
-.creating-category__text-tab--wrap::-webkit-scrollbar {
-    height: 1px;
-    background: #898989;
-}
+// .creating-category__text-tab--wrap::-webkit-scrollbar {
+//     height: 1px;
+//     background: #898989;
+// }
 
 
 
@@ -56,6 +90,9 @@ useEffect(() => {
 },)
 
 
+
+const isMacLike = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
+const isIOS = /(iPhone|iPod|iPad)/i.test(navigator.platform);
 
 
 useEffect(() => {
