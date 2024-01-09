@@ -103,3 +103,23 @@ useEffect(() => {
       document.body.style.overflow = 'hidden';
   } 
 }, [openModalForm])
+
+
+
+// поява Header при скролі на телефоні не використовується
+const currentScrollPos = window.pageYOffset;
+const navbar = document.getElementById('navbar');
+if (navbar) {
+   if (window.innerWidth < 640) {
+       if (prevScrollpos.current > currentScrollPos) {
+         navbar.style.top = '0';
+       } else {
+           if (window.pageYOffset > 85) {
+               navbar.style.top = '-607px';
+               console.log('windowWidth: ', windowWidth)
+           }
+       }
+   } 
+
+   prevScrollpos.current = currentScrollPos;
+}
