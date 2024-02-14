@@ -66,3 +66,11 @@ export default function Items() {
    </div>
   );
 }
+
+
+// повернення на зад
+const navigate = useNavigate();
+
+const handleGoBack = () => {
+  navigate(-1);
+};

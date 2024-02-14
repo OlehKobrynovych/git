@@ -123,3 +123,10 @@ if (navbar) {
 
    prevScrollpos.current = currentScrollPos;
 }
+
+
+
+// window.addEventListener("touchmove", handleSlideChangeTransitionStart2, { passive: false });
+        // window.addEventListener("touchstart", handleSlideChangeTransitionStart2, { passive: false });
+        // window.addEventListener('scroll', handleScroll, { passive: true });
+        // window.visualViewport.addEventListener('resize', handleZoomChange);

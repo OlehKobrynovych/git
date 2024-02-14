@@ -22,3 +22,19 @@ const handleNextSleder = () => {
         swiperRef.current.swiper.slidePrev(); 
     }
 }
+
+
+/* тест скрол слідер*/
+.producers-block__top-swiper {
+    overflow-x: hidden; /* Додаємо цю властивість для блокування зміщення вправо-вліво */
+    /* scroll-snap-type: x mandatory; */
+    scroll-snap-type: block;
+    /* white-space: nowrap; */
+  }
+  
+  /* Якщо ви вирішите використовувати overflow: hidden, то ця частина може бути зайвою */
+  .producers-block__top-slider-wrap {
+    scroll-snap-align: start;
+  }
+
+/*  */

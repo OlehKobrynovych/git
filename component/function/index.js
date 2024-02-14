@@ -21,3 +21,7 @@ const handlePositionCategory = (id) => {
         // }
     }
 }
+
+
+// створення масиву чисел
+const data = Array.from({ length: pageSearchParams ? (pageSearchParams + 1)*40 : 40 }, (_, index) => index + 1);
