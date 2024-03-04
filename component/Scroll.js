@@ -130,3 +130,50 @@ if (navbar) {
         // window.addEventListener("touchstart", handleSlideChangeTransitionStart2, { passive: false });
         // window.addEventListener('scroll', handleScroll, { passive: true });
         // window.visualViewport.addEventListener('resize', handleZoomChange);
+
+
+
+
+  // відслідковування руху мишкі і скрол елемента в протилежному напрямку
+  const zoomWrapRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const zoomWrap = zoomWrapRef.current;
+    if (!zoomWrap) return;
+
+    const deltaY = e.nativeEvent.movementY;
+
+    if (deltaY !== 0) {
+      // Визначаємо напрямок руху курсора та скролимо в протилежному напрямку
+      zoomWrap.scrollTop -= deltaY;
+    }
+  };
+
+  <div className={`product-view__modal-zoom-wrap`} 
+      id="zoomWrapId"
+      ref={zoomWrapRef}
+      onMouseMove={handleMouseMove}
+      style={{ marginLeft: isZoom ? `${window.innerWidth - document.body.offsetWidth}px !important` : null }}
+  >
+   контент 
+  </div>
+
+
+
+// ---------------------------------------------
+// скрол в попередню точку після повернення  на попередню сторінку
+const [previousPathname, setPreviousPathname] = useState(location.pathname);
+
+window.addEventListener('popstate', handlePopState);
+
+
+useEffect(() => {
+  dispatch(setScrollPositionBeforeView({[previousPathname]: windowScrollY}))
+  setPreviousPathname(location.pathname);
+}, [location.pathname]);
+
+const handlePopState = () => {
+  setTimeout(() => {
+      window.scroll({top: scrollPositionBeforeView[location.pathname]})
+  }, 200)
+};

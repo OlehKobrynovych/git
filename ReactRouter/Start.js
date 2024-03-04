@@ -74,3 +74,19 @@ const navigate = useNavigate();
 const handleGoBack = () => {
   navigate(-1);
 };
+
+
+
+// щоб посилання можна булоб відкрити в новому вікні
+const handleNavLinkClick = (event) => {
+  // Перевіряємо, чи було натиснуто праву кнопку миші
+  if (event.button === 2) {
+    // Якщо так, залишаємо браузер обробляти подію, щоб відкрити посилання в новому вікні
+    return;
+  } else {
+    // В іншому випадку, перештовхуємо користувача на нову сторінку
+    navigate(`vendor/${vendorAlias2}`);
+  }
+};
+
+<NavLink to={`vendor/${vendorAlias1}`} className="main-btn-2" onClick={handleNavLinkClick}>Детальніше</NavLink>

@@ -1,6 +1,11 @@
 https://holostenko.ua/uk/blog/mikrorazmetka-dlya-internet-magazina
 
 
+
+
+<title data-react-helmet="true">{selectBlock.seo_default_title}</title> // data-react-helmet="true" для заміни існуючого метатегу
+<title data-rh="true">{selectBlock.seo_default_title}</title> // data-react-helmet="true" для заміни існуючого метатегу
+
 import { Helmet } from 'react-helmet';
 
 <Helmet>
@@ -35,4 +40,7 @@ import { Helmet } from 'react-helmet';
 // Disallow: /success
 // Disallow: /favorite
 // Disallow: /checkout
-// Disallow:                                  // команда блочить всі верхні команди потрібно видалити її якщо потрібно щоб сайт індексувався
+// Disallow: /                             // команда блочить всі верхні команди потрібно видалити її якщо потрібно щоб сайт індексувався
+
+
+{/* <meta name="robots" content="noindex, nofollow"></meta> */}

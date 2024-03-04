@@ -13,3 +13,7 @@ body {
     -moz-text-size-adjust: 100%;  
     transform: scale(1);  
   }
+
+
+  /* Вимикає автоматичне маштабування тексту на сафарі */
+  -webkit-text-size-adjust: 100%;  
