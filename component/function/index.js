@@ -25,3 +25,17 @@ const handlePositionCategory = (id) => {
 
 // створення масиву чисел
 const data = Array.from({ length: pageSearchParams ? (pageSearchParams + 1)*40 : 40 }, (_, index) => index + 1);
+
+
+//запис нового значення
+setCharacteristicsOptions((prevValue) => {
+    let arr = prevValue.map((el, i) => {
+        if (el.name === characteristic.name) {
+            el = {...el, is_hide_in_filter: is_hide_in_filter, is_new_value_blocked: is_new_value_blocked, is_few_values_allowed: is_few_values_allowed, is_required_input: is_required_input}
+            return el;
+        }
+        return el;
+    });
+
+    return [...arr]
+})

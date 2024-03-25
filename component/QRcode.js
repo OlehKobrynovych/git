@@ -1,3 +1,10 @@
+// https://www.npmjs.com/package/react-qr-scanner
+//https://www.npmjs.com/package/@yudiel/react-qr-scanner
+
+// дозвіл на використання камери
+//navigator.mediaDevices.getUserMedia({audio: true, video: true})
+
+
 import React, { useEffect, useRef } from 'react';
 import Quagga from 'quagga';
 import './BarcodeScanner.css';

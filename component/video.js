@@ -1,3 +1,5 @@
+// react-player
+
 // дістати картинку з відео
 https://noembed.com/
 fetch(`http://noembed.com/embed?url=https://www.youtube.com/watch?v=WNeLUngb-Xg`)
