@@ -4,6 +4,11 @@
 // дозвіл на використання камери
 //navigator.mediaDevices.getUserMedia({audio: true, video: true})
 
+Створення QR коду 
+https://www.youtube.com/watch?v=Kr6Pn4rr4Kk&list=PLOQDek48BpZG0kpcUAoy5Z5ZvZN1HYt3Z&index=6
+https://github.com/kazuhikoarase/qrcode-generator/tree/master/js
+
+
 
 import React, { useEffect, useRef } from 'react';
 import Quagga from 'quagga';
@@ -76,3 +81,5 @@ const BarcodeScanner = ({setIsScanner, isScanner, closeModal}) => {
   }
   
 export default BarcodeScanner;
+
+

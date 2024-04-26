@@ -8,4 +8,4 @@ fetch(`http://noembed.com/embed?url=https://www.youtube.com/watch?v=WNeLUngb-Xg`
         })
         .then((data) => {
         console.log(data);
-        });
+});

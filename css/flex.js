@@ -1,5 +1,9 @@
 display: flex;
 
+Інформація про Flex флекс
+https://yoksel.github.io/flex-cheatsheet/#section-flex-values
+
+
 
 
 // 

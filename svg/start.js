@@ -33,3 +33,8 @@ import { ReactComponent as Logo } from './images/Logo.svg'     // при імп�
 <symbol>   // щось подібне до <g></g> i <def></def>
 
 </symbol>
+
+
+// щоб взнати довжину паса в svg
+// var path = document.querySelector('.path');
+// var length = path.getTotalLength();

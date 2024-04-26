@@ -177,3 +177,9 @@ const handlePopState = () => {
       window.scroll({top: scrollPositionBeforeView[location.pathname]})
   }, 200)
 };
+
+
+
+// 
+// Компоненти React для ефективного відтворення великих списків і табличних даних. Як зробити так щоб контент загружався поступово при скролі scroll в низ
+// https://www.npmjs.com/package/react-window

@@ -1,3 +1,8 @@
+Робота з часом Data перетворення часу 
+https://momentjs.com/
+
+
+
 // вивід дати
 new Date(order.created_at).toLocaleString()
 
@@ -11,3 +16,5 @@ let hours = date.getHours().toString().padStart(2, '0');
 let minutes = date.getMinutes().toString().padStart(2, '0');
 
 return day + '.' + month + '.' + year + ' ' + hours + ':' + minutes;
+
+
