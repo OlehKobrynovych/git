@@ -3,3 +3,6 @@ powercfg /batteryreport
 
 //Дорожні карти для навчання
 https://roadmap.sh/
+
+
+https://web.dev/learn/performance

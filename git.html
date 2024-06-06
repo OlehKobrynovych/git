@@ -1,3 +1,7 @@
+git checkout -b feat/fe-3/training-creation
+git push --set-upstream origin feat/fe-3/training-creation
+
+
 // щоб переглянути дані авторизації
 git config --global user.name
 
@@ -136,3 +140,73 @@ https://www.atlassian.com/ru/git/tutorials/rewriting-history
 Інформація про грід grid
 https://yoksel.github.io/grid-cheatsheet/#section-declaring
 
+
+
+
+//////////////////////////////////////////////
+Відновлення змін за допомогою git reflog
+Перевірте рефлог:
+Рефлог відображає історію всіх переміщень HEAD, включаючи ті, що не відображаються у звичайному логі.
+
+sh
+Копіювати код
+git reflog
+Ви побачите щось на кшталт цього:
+
+sql
+Копіювати код
+a1b2c3d (HEAD -> master) HEAD@{0}: checkout: moving from other-branch to master
+e4f5g6h HEAD@{1}: commit: Your commit message
+i7j8k9l HEAD@{2}: checkout: moving from master to other-branch
+Знайдіть рядок, що відповідає коміту з вашими змінами. Наприклад, припустимо, це e4f5g6h.
+
+Перейдіть до коміту з потрібними змінами:
+Перейдіть до коміту, де ви зробили правки.
+
+sh
+Копіювати код
+git checkout e4f5g6h
+Створіть нову гілку або закомітьте зміни:
+Якщо ви хочете зберегти ці зміни, створіть нову гілку або зробіть новий коміт.
+
+sh
+Копіювати код
+git checkout -b recover-branch
+Тепер у вас є всі зміни у новій гілці.
+
+Відновлення змін за допомогою git cherry-pick
+Якщо ви знаєте SHA коміту з вашими правками, ви можете "витягнути" ці зміни в потрібну гілку.
+
+Перейдіть до гілки, де ви хочете відновити зміни:
+
+sh
+Копіювати код
+git checkout master
+Використайте cherry-pick:
+
+sh
+Копіювати код
+git cherry-pick e4f5g6h
+Використання git stash (якщо було зроблено stash)
+Якщо перед переключенням ви зробили git stash, ви можете відновити зміни наступним чином:
+
+Перевірте список ваших stash:
+
+sh
+Копіювати код
+git stash list
+Відновіть зміни з stash:
+
+sh
+Копіювати код
+git stash apply
+або
+
+sh
+Копіювати код
+git stash pop
+Підсумок
+git reflog допомагає знайти коміт з вашими змінами.
+git cherry-pick витягує коміт в іншу гілку.
+git stash використовується для тимчасового збереження незакомічених змін.
+Ці методи допоможуть вам повернути загублені правки. Якщо у вас виникнуть питання, не соромтеся запитувати!
