@@ -107,3 +107,12 @@ export const delayedSetIsPreloader = (dispatch) => {
     dispatch(setIsPreloader(false));
   }, 400); 
 }
+
+export const handleGeoLocation = () => {
+  const userLanguage = navigator.language;
+  if (userLanguage && userLanguage.includes('uk')) {
+    return 'ua';
+  } else {
+    return 'en';
+  }
+};

@@ -21,3 +21,6 @@ const handleUploudImg = (file) => {
         setImgArr([...imgArr, file])
     }
 }
+
+// видалення картинки  і повторне її завантаження
+event.target.value = ''; 

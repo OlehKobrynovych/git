@@ -1,5 +1,6 @@
 // https://www.npmjs.com/package/react-qr-scanner
 //https://www.npmjs.com/package/@yudiel/react-qr-scanner
+// https://www.npmjs.com/package/html5-qrcode
 
 // дозвіл на використання камери
 //navigator.mediaDevices.getUserMedia({audio: true, video: true})

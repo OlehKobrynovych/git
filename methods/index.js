@@ -18,3 +18,9 @@ console.log(str1.padStart(2, '0'));
 // Expected output: "05"
 
 
+
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/at
+const array1 = [5, 12, 8, 130, 44];
+let index = 2;
+console.log(`An index of ${index} returns ${array1.at(index)}`);
+// Expected output: "An index of 2 returns 8"

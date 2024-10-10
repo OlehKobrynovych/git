@@ -1,5 +1,5 @@
 // менеджер NVM для переходц між різними версіями ноди
-Для MacOS и Linux: https://github.com/nvm-sh/nvm
+Для MacOS и Linux: https://gitwhub.com/nvm-sh/nvm
 
 Для Windows: https://github.com/coreybutler/nvm-windows
 Для Windows: https://github.com/nvm-sh/nvm

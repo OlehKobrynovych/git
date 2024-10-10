@@ -27,6 +27,7 @@ import { Helmet } from 'react-helmet';
 
 // сформувати mapsait
 // https://www.mysitemapgenerator.com/ru/
+// https://www.xml-sitemaps.com/
 
 
 
